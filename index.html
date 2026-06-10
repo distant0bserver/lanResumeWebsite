@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyen Linh Lan — Language Educator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Noto+Serif+JP:wght@300;400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Nguyễn Linh Lan</span>
+      <ul class="nav-links">
+        <li><a href="#about"        data-i18n="nav.about">About</a></li>
+        <li><a href="#teaching"     data-i18n="nav.teaching">Teaching</a></li>
+        <li><a href="#philosophy"   data-i18n="nav.philosophy">Philosophy</a></li>
+        <li><a href="#academic"     data-i18n="nav.academic">Academic</a></li>
+        <li><a href="#credentials"  data-i18n="nav.credentials">Credentials</a></li>
+        <li><a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a></li>
+        <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <!-- Language switcher -->
+      <div class="lang-switcher">
+        <button class="lang-sw-btn active" data-lang="en">EN</button>
+        <button class="lang-sw-btn" data-lang="vi">VI</button>
+        <button class="lang-sw-btn" data-lang="ja">日本語</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#about"        data-i18n="nav.about">About</a></li>
+      <li><a href="#teaching"     data-i18n="nav.teaching">Teaching</a></li>
+      <li><a href="#philosophy"   data-i18n="nav.philosophy">Philosophy</a></li>
+      <li><a href="#academic"     data-i18n="nav.academic">Academic</a></li>
+      <li><a href="#credentials"  data-i18n="nav.credentials">Credentials</a></li>
+      <li><a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a></li>
+      <li><a href="#contact"      data-i18n="nav.contact">Contact</a></li>
+      <!-- Mobile lang switcher -->
+      <li class="mobile-lang-row">
+        <button class="lang-sw-btn active" data-lang="en">EN</button>
+        <button class="lang-sw-btn" data-lang="vi">VI</button>
+        <button class="lang-sw-btn" data-lang="ja">日本語</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────── -->
+  <section id="about" class="hero">
+    <div class="ao-dai-pattern" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-photo-wrap">
+        <div class="photo-frame">
+          <img src="resumeImg.png" alt="Nguyen Linh Lan at Tokyo University of Foreign Studies graduation" />
+        </div>
+        <div class="photo-floral" aria-hidden="true"></div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-eyebrow" data-i18n="hero.eyebrow">Language Educator &amp; Doctoral Researcher</p>
+        <h1>Nguyễn Linh Lan</h1>
+        <p class="hero-langs">
+          <button class="lang-tag jp" data-lang="ja" onclick="applyLanguage('ja')">日本語</button>
+          <button class="lang-tag vn" data-lang="vi" onclick="applyLanguage('vi')">Tiếng Việt</button>
+          <button class="lang-tag en" data-lang="en" onclick="applyLanguage('en')">English</button>
+        </p>
+        <p class="hero-subtitle" data-i18n-html="hero.subtitle">
+          Vietnamese, Japanese &amp; English educator and doctoral researcher at
+          <strong>Tokyo University of Foreign Studies</strong>,
+          specialising in Japanese language education.
+        </p>
+        <div class="hero-badges">
+          <span class="badge">JLPT N1</span>
+          <span class="badge">IELTS 8.0</span>
+          <span class="badge" data-i18n="hero.badge.years">8+ years in Japan</span>
+          <span class="badge">PhD Candidate · TUFS</span>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta.book">Book a Lesson</a>
+          <a href="#teaching" class="btn btn-outline" data-i18n="hero.cta.see">See What I Teach</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ── TEACHING ──────────────────────────────────────── -->
+  <section id="teaching" class="section teaching-section">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-i18n="teaching.eyebrow">What I Teach</p>
+      <h2 class="section-title" data-i18n="teaching.title">Languages &amp; Levels</h2>
+      <p class="section-lead" data-i18n="teaching.lead">
+        As a multilingual teacher fluent in Vietnamese, English, and Japanese, I explain language
+        concepts clearly and adapt every lesson to your linguistic background and personal goals.
+      </p>
+
+      <div class="lang-cards">
+
+        <!-- Japanese -->
+        <div class="lang-card">
+          <div class="lang-card-header jp-header">
+            <span class="lang-icon">🇯🇵</span>
+            <h3 data-i18n="teaching.jp.title">Japanese</h3>
+          </div>
+          <ul>
+            <li data-i18n="teaching.jp.l1">All levels — Beginner to Advanced</li>
+            <li data-i18n="teaching.jp.l2">JLPT Preparation (N5–N1)</li>
+            <li data-i18n="teaching.jp.l3">Daily Conversation</li>
+            <li data-i18n="teaching.jp.l4">Business Japanese</li>
+            <li data-i18n="teaching.jp.l5">Travel Japanese</li>
+            <li data-i18n="teaching.jp.l6">Japanese for Children</li>
+          </ul>
+        </div>
+
+        <!-- Vietnamese -->
+        <div class="lang-card">
+          <div class="lang-card-header vn-header">
+            <span class="lang-icon">🇻🇳</span>
+            <h3 data-i18n="teaching.vn.title">Vietnamese</h3>
+          </div>
+          <ul>
+            <li data-i18n="teaching.vn.l1">All levels — Beginner to Advanced</li>
+            <li data-i18n="teaching.vn.l2">Daily Conversation</li>
+            <li data-i18n="teaching.vn.l3">Southern Vietnamese</li>
+            <li data-i18n="teaching.vn.l4">Northern Vietnamese</li>
+            <li data-i18n="teaching.vn.l5">Pronunciation &amp; Accent Training</li>
+            <li data-i18n="teaching.vn.l6">Vietnamese for Children</li>
+          </ul>
+        </div>
+
+        <!-- English -->
+        <div class="lang-card">
+          <div class="lang-card-header en-header">
+            <span class="lang-icon">🌏</span>
+            <h3 data-i18n="teaching.en.title">English</h3>
+          </div>
+          <ul>
+            <li data-i18n="teaching.en.l1">All levels — Beginner to Advanced</li>
+            <li data-i18n="teaching.en.l2">IELTS Preparation</li>
+            <li data-i18n="teaching.en.l3">Daily Conversation</li>
+            <li data-i18n="teaching.en.l4">Academic &amp; Professional English</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Formats -->
+      <div class="formats-row">
+        <div class="format-item">
+          <div class="format-icon">💻</div>
+          <h4 data-i18n="format.online.title">Online Lessons</h4>
+          <p data-i18n="format.online.desc">Available to students worldwide via video call</p>
+        </div>
+        <div class="format-item">
+          <div class="format-icon">📍</div>
+          <h4 data-i18n="format.inperson.title">In-Person (Tokyo)</h4>
+          <p data-i18n="format.inperson.desc">Tachikawa–Musashisakai station area</p>
+        </div>
+        <div class="format-item">
+          <div class="format-icon">🗣️</div>
+          <h4 data-i18n="format.conv.title">Conversation Practice</h4>
+          <p data-i18n="format.conv.desc">Daily life, travel &amp; professional communication</p>
+        </div>
+        <div class="format-item">
+          <div class="format-icon">📝</div>
+          <h4 data-i18n="format.exam.title">Exam Preparation</h4>
+          <p data-i18n="format.exam.desc">JLPT, IELTS &amp; other proficiency tests</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PHILOSOPHY ─────────────────────────────────────── -->
+  <section id="philosophy" class="section philosophy-section">
+    <div class="ao-dai-pattern philosophy-pattern" aria-hidden="true"></div>
+    <div class="section-inner philosophy-inner">
+      <p class="section-eyebrow light" data-i18n="philosophy.eyebrow">My Approach</p>
+      <h2 class="section-title light" data-i18n="philosophy.title">Teaching Philosophy</h2>
+      <div class="philosophy-grid">
+        <div class="philosophy-quote">
+          <blockquote data-i18n="philosophy.quote">
+            "Language learning should be personalised, practical, and enjoyable."
+          </blockquote>
+        </div>
+        <div class="philosophy-body">
+          <p data-i18n="philosophy.p1">
+            Every student has different goals — passing an exam, preparing for travel, advancing a career,
+            or communicating confidently in daily life. My role is to help each student reach those goals
+            in the most effective way possible.
+          </p>
+          <p data-i18n="philosophy.p2">
+            I work closely with students to set clear learning objectives and create a realistic study plan
+            based on their desired timeline. Because learning is not always a straight path, I regularly
+            adjust lessons according to each student's progress, strengths, and challenges.
+          </p>
+          <p data-i18n="philosophy.p3">
+            My lessons are flexible and student-centred, combining structured learning with real-world
+            communication practice. I encourage students to actively participate, make mistakes without
+            fear, and develop confidence. My ultimate goal is not only to improve language skills, but to
+            make every student enjoy the journey and stay motivated throughout.
+          </p>
+        </div>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-num">01</span>
+          <h4 data-i18n="pillar1.title">Personalised</h4>
+          <p data-i18n="pillar1.desc">Lessons tailored to your goals, level, and preferred pace</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">02</span>
+          <h4 data-i18n="pillar2.title">Practical</h4>
+          <p data-i18n="pillar2.desc">Real-world communication from the very first lesson</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">03</span>
+          <h4 data-i18n="pillar3.title">Enjoyable</h4>
+          <p data-i18n="pillar3.desc">A supportive, encouraging environment where mistakes are welcome</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">04</span>
+          <h4 data-i18n="pillar4.title">Flexible</h4>
+          <p data-i18n="pillar4.desc">Study plans that adapt as you grow</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACADEMIC ──────────────────────────────────────── -->
+  <section id="academic" class="section academic-section">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-i18n="academic.eyebrow">Research &amp; Education</p>
+      <h2 class="section-title" data-i18n="academic.title">Academic Background</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date" data-i18n="academic.phd.date">Current</span>
+            <h4 data-i18n="academic.phd.title">Doctor of Philosophy (PhD Candidate)</h4>
+            <p class="timeline-inst" data-i18n="academic.phd.school">Tokyo University of Foreign Studies — Graduate School</p>
+            <p data-i18n="academic.phd.detail">Major: Japanese Studies · Specialisation: Japanese Language Education</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date" data-i18n="academic.ma.date">Completed</span>
+            <h4 data-i18n="academic.ma.title">Master of Arts (Humanities)</h4>
+            <p class="timeline-inst" data-i18n="academic.ma.school">Tokyo University of Foreign Studies — Graduate School</p>
+            <p data-i18n="academic.ma.detail">Field: Japan Studies</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="research-interests">
+        <h3 data-i18n="academic.research.title">Research Interests</h3>
+        <div class="interest-tags">
+          <span class="i-tag" data-i18n="academic.tag1">Japanese Language Education</span>
+          <span class="i-tag" data-i18n="academic.tag2">Second Language Acquisition</span>
+          <span class="i-tag" data-i18n="academic.tag3">Phonology &amp; Pronunciation</span>
+          <span class="i-tag" data-i18n="academic.tag4">Pedagogy &amp; Curriculum Design</span>
+          <span class="i-tag" data-i18n="academic.tag5">Cross-linguistic Transfer</span>
+          <span class="i-tag" data-i18n="academic.tag6">Multilingual Learning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CREDENTIALS ───────────────────────────────────── -->
+  <section id="credentials" class="section credentials-section">
+    <div class="ao-dai-pattern cred-pattern" aria-hidden="true"></div>
+    <div class="section-inner">
+      <p class="section-eyebrow light" data-i18n="credentials.eyebrow">Qualifications</p>
+      <h2 class="section-title light" data-i18n="credentials.title">Language Proficiency &amp; Credentials</h2>
+
+      <div class="cred-cards">
+
+        <div class="cred-card">
+          <div class="cred-flag">🇻🇳</div>
+          <h3 data-i18n="credentials.vn.title">Vietnamese</h3>
+          <ul>
+            <li><span class="cred-highlight" data-i18n="credentials.vn.l1">Native Speaker</span></li>
+            <li data-i18n="credentials.vn.l2">Fluent in both Southern and Northern Vietnamese</li>
+          </ul>
+        </div>
+
+        <div class="cred-card">
+          <div class="cred-flag">🇯🇵</div>
+          <h3 data-i18n="credentials.jp.title">Japanese</h3>
+          <ul>
+            <li><span class="cred-highlight" data-i18n="credentials.jp.l1">Business-Level Proficiency</span></li>
+            <li data-i18n="credentials.jp.l2">JLPT N1 Certified</li>
+            <li data-i18n="credentials.jp.l3">8+ years living and working in Japan</li>
+          </ul>
+        </div>
+
+        <div class="cred-card">
+          <div class="cred-flag">🌏</div>
+          <h3 data-i18n="credentials.en.title">English</h3>
+          <ul>
+            <li><span class="cred-highlight" data-i18n="credentials.en.l1">Near-Native Proficiency</span></li>
+            <li data-i18n="credentials.en.l2">IELTS Overall Band Score: 8.0</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ──────────────────────────────────── -->
+  <section id="testimonials" class="section testimonials-section">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-i18n="testimonials.eyebrow">Student Voices</p>
+      <h2 class="section-title" data-i18n="testimonials.title">What My Students Say</h2>
+
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p data-i18n="t1.text">
+            She not only teaches the fundamentals of the language but also introduces Japanese culture,
+            customs, and everyday social norms that are not typically covered in textbooks. Her support
+            and dedication have made my learning experience both effective and enjoyable.
+          </p>
+          <div class="testimonial-author">
+            <span class="t-name" data-i18n="t1.name">Japanese Student</span>
+            <span class="t-duration" data-i18n="t1.duration">2 months · twice a week</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p data-i18n="t2.text">
+            I have learned a lot in a fun and relaxed environment, and she always makes the lessons
+            engaging and enjoyable. She spends extra time outside of class reviewing my homework and
+            providing detailed feedback, which has helped me make steady progress.
+          </p>
+          <div class="testimonial-author">
+            <span class="t-name" data-i18n="t2.name">Vietnamese Student</span>
+            <span class="t-duration" data-i18n="t2.duration">1 year · online</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p data-i18n="t3.text">
+            When I started, I knew nothing about the language, but now I can communicate in everyday
+            situations. Business trips to Ho Chi Minh City have become far more enjoyable because I can
+            make small talk with local people and better connect with the culture.
+          </p>
+          <div class="testimonial-author">
+            <span class="t-name" data-i18n="t3.name">Vietnamese Student</span>
+            <span class="t-duration" data-i18n="t3.duration">1.5 years · once a week</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ───────────────────────────────────────── -->
+  <section id="contact" class="section contact-section">
+    <div class="ao-dai-pattern contact-pattern" aria-hidden="true"></div>
+    <div class="section-inner">
+      <p class="section-eyebrow light" data-i18n="contact.eyebrow">Get in Touch</p>
+      <h2 class="section-title light" data-i18n="contact.title">Send an Enquiry</h2>
+      <p class="section-lead light" data-i18n="contact.lead">
+        Whether you're an individual learner or a company looking for language training,
+        I'd love to hear from you.
+      </p>
+
+      <div class="form-tabs">
+        <button class="tab-btn active" data-tab="personal" data-i18n="contact.tab.personal">Personal Lesson</button>
+        <button class="tab-btn" data-tab="corporate" data-i18n="contact.tab.corporate">Corporate Offer</button>
+      </div>
+
+      <!-- Personal Form -->
+      <form id="personalForm" class="enquiry-form active-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="form_type" value="Personal Lesson Enquiry" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="p-name"><span data-i18n="form.p.name.label">Full Name</span> <span class="req">*</span></label>
+            <input type="text" id="p-name" name="name" required
+              data-i18n-placeholder="form.p.name.placeholder" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="p-email"><span data-i18n="form.p.email.label">Email</span> <span class="req">*</span></label>
+            <input type="email" id="p-email" name="email" required
+              data-i18n-placeholder="form.p.email.placeholder" placeholder="you@example.com" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="p-lang"><span data-i18n="form.p.lang.label">Language of Interest</span> <span class="req">*</span></label>
+            <select id="p-lang" name="language" required data-i18n-select="sel.p.lang">
+              <option value="" disabled selected>Select a language</option>
+              <option>Japanese</option>
+              <option>Vietnamese</option>
+              <option>English</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="p-level"><span data-i18n="form.p.level.label">Current Level</span> <span class="req">*</span></label>
+            <select id="p-level" name="level" required data-i18n-select="sel.p.level">
+              <option value="" disabled selected>Select your level</option>
+              <option>Complete Beginner</option>
+              <option>Beginner (A1–A2)</option>
+              <option>Intermediate (B1–B2)</option>
+              <option>Advanced (C1–C2)</option>
+              <option>Not Sure</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="p-goal"><span data-i18n="form.p.goal.label">Learning Goal</span> <span class="req">*</span></label>
+            <select id="p-goal" name="goal" required data-i18n-select="sel.p.goal">
+              <option value="" disabled selected>Primary goal</option>
+              <option>General Conversation</option>
+              <option>Exam Preparation (JLPT / IELTS)</option>
+              <option>Business / Professional</option>
+              <option>Travel</option>
+              <option>Academic</option>
+              <option>Children's Lessons</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="p-format" data-i18n="form.p.format.label">Preferred Format</label>
+            <select id="p-format" name="format" data-i18n-select="sel.p.format">
+              <option value="" disabled selected>Online or In-Person?</option>
+              <option>Online</option>
+              <option>In-Person (Tokyo)</option>
+              <option>No Preference</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="p-msg" data-i18n="form.p.msg.label">Message</label>
+          <textarea id="p-msg" name="message" rows="5"
+            data-i18n-placeholder="form.p.msg.placeholder"
+            placeholder="Tell me a bit about yourself, your schedule preferences, or anything you'd like me to know…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit" data-i18n="form.p.submit">Send Enquiry</button>
+      </form>
+
+      <!-- Corporate Form -->
+      <form id="corporateForm" class="enquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="form_type" value="Corporate Training Enquiry" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="c-contact"><span data-i18n="form.c.contact.label">Contact Person</span> <span class="req">*</span></label>
+            <input type="text" id="c-contact" name="contact_name" required
+              data-i18n-placeholder="form.c.contact.placeholder" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="c-company"><span data-i18n="form.c.company.label">Company / Organisation</span> <span class="req">*</span></label>
+            <input type="text" id="c-company" name="company" required
+              data-i18n-placeholder="form.c.company.placeholder" placeholder="Company name" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="c-email"><span data-i18n="form.c.email.label">Business Email</span> <span class="req">*</span></label>
+            <input type="email" id="c-email" name="email" required
+              data-i18n-placeholder="form.c.email.placeholder" placeholder="you@company.com" />
+          </div>
+          <div class="form-group">
+            <label for="c-phone" data-i18n="form.c.phone.label">Phone / WhatsApp</label>
+            <input type="tel" id="c-phone" name="phone"
+              data-i18n-placeholder="form.c.phone.placeholder" placeholder="+XX XXX XXXX" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="c-lang"><span data-i18n="form.c.lang.label">Language(s) Required</span> <span class="req">*</span></label>
+            <select id="c-lang" name="language" required data-i18n-select="sel.c.lang">
+              <option value="" disabled selected>Select language(s)</option>
+              <option>Japanese</option>
+              <option>Vietnamese</option>
+              <option>English</option>
+              <option>Multiple Languages</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="c-size" data-i18n="form.c.size.label">Number of Participants</label>
+            <select id="c-size" name="group_size" data-i18n-select="sel.c.size">
+              <option value="" disabled selected>Approximate group size</option>
+              <option>1–5</option>
+              <option>6–15</option>
+              <option>16–30</option>
+              <option>30+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="c-purpose"><span data-i18n="form.c.purpose.label">Training Purpose</span> <span class="req">*</span></label>
+            <select id="c-purpose" name="purpose" required data-i18n-select="sel.c.purpose">
+              <option value="" disabled selected>Main purpose</option>
+              <option>Business Communication</option>
+              <option>Customer Service</option>
+              <option>Exam / Certification Prep</option>
+              <option>Onboarding / Relocation Support</option>
+              <option>Intercultural Training</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="c-format" data-i18n="form.c.format.label">Delivery Format</label>
+            <select id="c-format" name="format" data-i18n-select="sel.c.format">
+              <option value="" disabled selected>How should lessons be delivered?</option>
+              <option>Online</option>
+              <option>On-site (Tokyo)</option>
+              <option>Hybrid</option>
+              <option>To Be Discussed</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="c-msg" data-i18n="form.c.msg.label">Additional Details</label>
+          <textarea id="c-msg" name="message" rows="5"
+            data-i18n-placeholder="form.c.msg.placeholder"
+            placeholder="Please share any context about your team's current level, objectives, timeline, or budget…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit" data-i18n="form.c.submit">Send Corporate Enquiry</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-name">Nguyễn Linh Lan</p>
+      <p class="footer-tagline" data-i18n="footer.tagline">Vietnamese · Japanese · English Language Educator</p>
+      <p class="footer-location" data-i18n="footer.location">📍 Tokyo, Japan &nbsp;|&nbsp; 🌐 Online Worldwide</p>
+      <p class="footer-copy" data-i18n="footer.copy">&copy; 2025 Nguyễn Linh Lan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
